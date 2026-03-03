@@ -1,0 +1,26 @@
+info:
+  name: Delivery Status
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "delivery_status",
+              "search": ""
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

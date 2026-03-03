@@ -1,0 +1,28 @@
+info:
+  name: Update Agent Status
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/update/427"
+  body:
+    type: json
+    data: |-
+      {
+        "params": {
+
+              "delivery_status": "002_urgent", // Selection: 001_very_u
+                "ids": [427,426]
+        }
+
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

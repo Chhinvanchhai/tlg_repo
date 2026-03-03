@@ -1,0 +1,26 @@
+info:
+  name: DEPOP Status
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "depot_dp_status",
+              "search": ""
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

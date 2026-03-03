@@ -1,0 +1,26 @@
+info:
+  name: more filter
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/filter"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "fields": ["container_no","container_size","customer_id","hbl_number","actual_arr_port_time","vai_port_border_id","sale_id","inland_status","delivery_status","permit_accept_date","edo_release","clearance_plan","storage_day_free_time","cs_control_log"
+              ]
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

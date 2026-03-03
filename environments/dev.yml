@@ -1,0 +1,12 @@
+name: dev
+variables:
+  - name: baseurl
+    value: http://localhost:8071
+  - name: token
+    value: ""
+  - name: refresh_token
+    value: ""
+  - name: login
+    value: admin
+  - name: passsword
+    value: admin

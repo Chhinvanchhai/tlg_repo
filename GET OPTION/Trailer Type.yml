@@ -1,0 +1,27 @@
+info:
+  name: Trailer Type
+  type: http
+  seq: 22
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "trialer_type_id",
+              "limit": 100,
+              "page": 1
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: LADEN CNTR FREE TIME STATUS
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "leden_cntr_fee_time",
+              "search": ""
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

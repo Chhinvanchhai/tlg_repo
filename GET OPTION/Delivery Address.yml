@@ -1,0 +1,30 @@
+info:
+  name: Delivery Address
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "delivery_address_ids",
+              "parent": {
+                  "fields_name": "city_address",
+                  "model": "res.partner",
+                  "id": 922 // customer id
+              }
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

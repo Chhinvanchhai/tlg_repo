@@ -1,0 +1,10 @@
+name: staging
+variables:
+  - name: baseurl
+    value: https://crmstage.supportinglog.com
+  - name: token
+    value: ""
+  - name: login
+    value: api_inland
+  - name: passsword
+    value: "12345"

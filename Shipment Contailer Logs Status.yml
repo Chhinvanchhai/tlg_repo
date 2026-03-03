@@ -1,0 +1,25 @@
+info:
+  name: Shipment Contailer Logs Status
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  body:
+    type: json
+    data: |-
+      {
+           "params" : {
+              "groupby": "dynamic_port_status,port_and_dryport_deli_add_plan,cs_control_log,delivery_status,depot_dp_status,pnh_dp_getin_getout_statu"
+           }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

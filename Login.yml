@@ -1,0 +1,53 @@
+info:
+  name: Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+           "params" : {
+              "login": "{{login}}",
+              "password": "{{password}}"
+           }
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: login
+      value: api_inland
+    - name: password
+      value: "12345"
+  scripts:
+    - type: after-response
+      code: |-
+        // This works because the request is finished!
+        const responseData = res.getBody();
+
+        if (responseData && responseData.result) {
+            const accessToken = responseData.result.access_token;
+            const refreshToken = responseData.result.refresh_token;
+
+            if (accessToken) {
+                bru.setEnvVar("token", accessToken);
+                console.log("Access Token updated!");
+            }
+            
+            if (refreshToken) {
+                bru.setEnvVar("refresh_token", refreshToken);
+                console.log("Refresh Token updated!");
+            }
+        } else {
+            console.warn("Result not found in response.");
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
