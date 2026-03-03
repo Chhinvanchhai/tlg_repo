@@ -5,6 +5,6 @@ variables:
   - name: token
     value: ""
   - name: login
-    value: api_inland
+    value: ""
   - name: passsword
-    value: "12345"
+    value: ""
