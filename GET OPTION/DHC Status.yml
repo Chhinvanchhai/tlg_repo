@@ -1,0 +1,27 @@
+info:
+  name: DHC Status
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/selection"
+  body:
+    type: json
+    data: |-
+      {
+          "params": {
+              "field_name": "thc_status_id",
+              "limit": 3,
+              "page": 1
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
