@@ -13,7 +13,7 @@ http:
           "params": {
               "field_name": "delivery_address_ids",
               "parent": {
-                  "fields_name": "city_address",
+                  "fields_name": "city_address,phone,name",
                   "model": "res.partner",
                   "id": 922 // customer id
               }

@@ -1,0 +1,58 @@
+info:
+  name: Get Status History
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/status.update.history/get"
+  body:
+    type: json
+    data: |+
+      {
+         "params" : {
+              "fields": "history_id, booking_order_id, customer_id, hbl_number, action_date_history_by_who, history_user_id, status, container_no, doc_status_id, thc_status_id, port_clearance_plan, trialer_type_id, ata_port_border, move_in_depot_dp, eta_dp, factory_eta, f_eta_time, delivery_address, cs_remark, inland_remark, to_pnh_dp_type",
+              "expand": true,
+              "page": 1,
+              "limit": 100,
+              "domain": [ [
+                          "history_id",
+                            "=",
+                           48 // container_id
+                        ]
+                      ]
+
+         }
+      }
+
+      //history_id: History Update
+      //booking_order_id: BO
+      //customer_id: Customer
+      //hbl_number: HBL/TBL
+      //action_date_history_by_who: Create On
+      //history_user_id: Created By
+      //status: Status
+      //container_no: Container No
+      //doc_status_id: DOC Status
+      //thc_status_id: THC Status
+      //port_clearance_plan: Clearance Plan
+      //trialer_type_id: Trailer Type
+      //ata_port_border: ATA Port/Border
+      //move_in_depot_dp: Move In Depot/DP
+      //eta_dp: ETA DP
+      //factory_eta: Unloading Date
+      //f_eta_time: Unloading Time
+      //delivery_address: Delivery Address
+      //cs_remark: CS Remark
+      //inland_remark: Inland Remark
+      //to_pnh_dp_type: TO PNH DP Type
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
