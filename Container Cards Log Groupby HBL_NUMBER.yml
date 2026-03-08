@@ -13,11 +13,13 @@ http:
          "params" : {
               "fields": "container_no,container_size,customer_id,hbl_number,actual_arr_port_time,vai_port_border_id,sale_id,inland_status,delivery_status,permit_accept_date,edo_release,clearance_plan,storage_day_free_time,cs_control_log",
               "expand": true,
-              "page": 2,
-              "limit": 30
+              "page": 1,
+              "limit": 10
               ,"map_domain": "hbl_number"
-              // ,"domain": [["container_no","=","7078KH453424"]]
+              ,"domain": [["cs_control_log","=","00a_pending"]]
+           
               ,"order": "id desc"
+             ,"is_query": true
          }
       }
   auth:

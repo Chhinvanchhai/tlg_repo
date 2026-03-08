@@ -20,9 +20,9 @@ http:
 runtime:
   variables:
     - name: login
-      value: api_inland
+      value: admin
     - name: password
-      value: "12345"
+      value: admin
   scripts:
     - type: after-response
       code: |-
