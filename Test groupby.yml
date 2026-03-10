@@ -1,0 +1,38 @@
+info:
+  name: Test groupby
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  body:
+    type: json
+    data: |-
+      {
+         "params" : {
+            "data_groupby":"hbl_number_store",
+            "fields": "container_no,container_size,customer_id,hbl_number,actual_arr_port_time",
+              "expand": true,
+              "page": 1,
+              "limit": 10
+              ,"order": "id desc",
+           "domain": [
+
+                [
+                  "cs_control_log",
+                  "=",
+                  "00a_pending"
+                ]
+           ]
+         }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

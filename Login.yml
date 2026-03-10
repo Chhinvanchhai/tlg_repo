@@ -11,8 +11,10 @@ http:
     data: |-
       {
            "params" : {
-              "login": "{{login}}",
-              "password": "{{password}}"
+      //         "login": "admin",
+      //         "password": "admin"
+               "login": "api_inland",
+              "password": "12345"
            }
       }
   auth: inherit
@@ -20,9 +22,9 @@ http:
 runtime:
   variables:
     - name: login
-      value: admin
+      value: ""
     - name: password
-      value: admin
+      value: "12345"
   scripts:
     - type: after-response
       code: |-

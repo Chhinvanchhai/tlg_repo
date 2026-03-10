@@ -10,9 +10,20 @@ http:
     type: json
     data: |-
       {
-           "params" : {
-              "groupby": "dynamic_port_status,port_and_dryport_deli_add_plan,cs_control_log,delivery_status,depot_dp_status,pnh_dp_getin_getout_statu"
-           }
+        "params" : {
+              
+        "groupby": "dynamic_port_status,cs_control_log,depot_dp_status,leden_cntr_fee_time_completed,pnh_dp_getin_getout_status,port_and_dryport_deli_add_plan,delivery_status,shipment_cancel_delete,sto_day_status,completed_sto_day_status,dem_day_status,completed_dem_day_status,det_day_status,complete_det_day_status,det_dem_day_status,complete_det_dem_day_status,leden_cntr_fee_time",
+          "order": "id desc"
+      //   "domain": [
+      //       [
+      //               "dynamic_port_status",
+      //               "=",
+      //               "BAVET"
+      //             ]
+      //   ]
+           
+        }
+        
       }
   auth:
     type: bearer
