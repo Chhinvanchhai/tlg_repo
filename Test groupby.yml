@@ -11,20 +11,15 @@ http:
     data: |-
       {
          "params" : {
-            "data_groupby":"hbl_number_store",
-            "fields": "container_no,container_size,customer_id,hbl_number,actual_arr_port_time",
+              "fields": "container_no,container_size,customer_id,hbl_number,actual_arr_port_time,vai_port_border_id,sale_id,inland_status,delivery_status,permit_accept_date,edo_release,clearance_plan,storage_day_free_time,cs_control_log",
               "expand": true,
-              "page": 1,
+              "page": 2,
               "limit": 10
-              ,"order": "id desc",
-           "domain": [
-
-                [
-                  "cs_control_log",
-                  "=",
-                  "00a_pending"
-                ]
-           ]
+              ,"data_groupy": "cs_control_log"
+      //         ,"domain": [["cs_control_log","=","00a_pending"]]
+           
+              ,"order": "id desc"
+             ,"is_query": 0
          }
       }
   auth:

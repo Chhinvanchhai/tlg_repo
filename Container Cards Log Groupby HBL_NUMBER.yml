@@ -15,7 +15,7 @@ http:
               "expand": true,
               "page": 2,
               "limit": 10
-              ,"map_domain": "hbl_number_store"
+              ,"map_domain": "cs_control_log"
       //         ,"domain": [["cs_control_log","=","00a_pending"]]
            
               ,"order": "id desc"

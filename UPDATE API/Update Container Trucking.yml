@@ -1,0 +1,43 @@
+info:
+  name: Update Container Trucking
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/update/0"
+  body:
+    type: json
+    data: |-
+      {
+        "params": {
+          // --- Column 1: Delivery Date & Time ---
+          "ata_port_border": "2026-03-14",           // ATA Port/Border
+          "depart_date": "2026-03-15",               // Gate Out Port/Border
+          "depart_time": "09:00",                    // Gate Out Port/Border Time (Char)
+          "get_in_depot_dp": "2026-03-15",           // Gate In Depot/DP 
+          "get_in_depot_dp_time": "14:30",           // Gate In Depot/DP Time (Char)
+          "get_out_depot_dp": "2026-03-16",          // Gate Out Depot/DP
+          "get_out_depot_dp_time": "08:15",          // Gate Out Depot/DP Time (Char)
+
+          // --- Column 2: Trucking information ---
+          "trucking_by": 1,                          // Many2one: ID from cg.trucking.by
+          "truck_no": 10,                            // Many2one: ID from cg.trucking.manage
+          "trailer_no": "T-9988",                    // Trailer No (Char)
+          "driver_number": "012345678",              // Driver Phone (Char)
+          "seal_no": "S123456789",                   // Seal No (Char)
+          "mt_container_drop": "Depot A",            // MT Container Drop (Char)
+          "p_trucking_remark": "Deliver before noon", // Port Trucking Remark (Char)
+
+          "ids": [266, 264]                          // Record IDs for the CS Control Log
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
