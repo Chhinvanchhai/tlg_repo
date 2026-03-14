@@ -11,13 +11,13 @@ http:
     data: |-
       {
            "params" : {
-              "login": "admin",
-              "password": "admin"
-      //          "login": "api_inland",
-      //         "password": "12345"
+      //         "login": "admin",
+      //         "password": "admin"
+               "login": "dryporttrucking@gmail.com",
+              "password": "123456"
       //            "login": "kimhak.phuor@tenglaygroup.com",
       //            "password": "123456"
-      //                   "login": "delivery@gmail.com",
+      //           "login": "delivery@gmail.com",
       //            "password": "123456"
            }
       }

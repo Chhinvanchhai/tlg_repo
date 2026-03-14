@@ -11,7 +11,9 @@ http:
     data: |-
       {
          "params" : {
-
+            "menus": false, 
+           "permissions": false
+           
          }
       }
   auth:

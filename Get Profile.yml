@@ -10,9 +10,7 @@ http:
     type: json
     data: |-
       {
-         "params" : {
 
-         }
       }
   auth:
     type: bearer

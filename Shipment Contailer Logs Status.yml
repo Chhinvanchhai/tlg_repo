@@ -16,9 +16,9 @@ http:
           "order": "id desc"
           ,
         "domain_groupby": [
-          ["dynamic_port_status", "=", "BAVET"]
+      //     ["dynamic_port_status", "=", "BAVET"]
         ],
-          "keep_zero": true
+          "keep_zero": false
            
         }
         
