@@ -1,0 +1,36 @@
+info:
+  name: Update Container Trucking 2
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/update/0"
+  body:
+    type: json
+    data: |-
+      {
+
+        "params": {
+          // --- Trucking Information (Dry Port) ---
+          "dp_arr_date": "2026-03-16",                // Gate In PNH DP
+          "dp_departdate": "2026-03-16",              // Gate Out PNH DP
+          "dp_truck_by": 2,                          // Many2one (TengLay)
+          "dp_trucking_no": 1,                       // Many2one (3A-0750)
+          "dp_trailer_nomber": "T-9988",              // PNH DP Trailer No
+          "dp_driver_phone_number": "012 345 678",    // PNH DP Driver Phone
+          "dp_mt_container_drop_trucking": "Depot A", // PNH DP MT Container Drop
+          "dp_p_trucking_remark": "Urgent delivery" ,  // PNH DP Trucking Remark
+           "ids": [46]    
+        
+      }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
