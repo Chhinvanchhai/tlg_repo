@@ -1,0 +1,39 @@
+info:
+  name: Get shipment tracking
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  body:
+    type: json
+    data: |
+      {
+         "params" : {
+              "fields": "storage_day_free_time, ata_port_border, aging_mt_container, move_in_depot_dp, container_no, container_size, eta_dp, date_value, order_unloading_date, cs_user_id, f_eta_time, doc_status_id, delivery_address, thc_status_id, cs_remark, clearance_plan, inland_remark, trialer_type_id, cs_control_log,hbl_number",
+              "expand": true,
+              "page": 1,
+              "limit": 10
+              ,"domain": [ [
+                              "hbl_number",
+                              "in",
+                              ["344555DFDS"]
+                          ]]
+           
+             ,"data_groupby":"hbl_number_store"
+
+         }
+      }
+
+
+      // ATA Port/Border, ata_port_border, Aging Cntr, aging_mt_container, Move in Depot/DP, move_in_depot_dp, Container No, container_no, Container Size, container_size, ETA DP, eta_dp, Booking Delivery Plan, date_value, Uploading Date, order_unloading_date, CS, cs_user_id, Uploading Time, f_eta_time, DOC Status, doc_status_id, Delivery Address, delivery_address, THC Status, thc_status_id, CS Remark, cs_remark, Clearance Plan, clearance_plan, Inland Remark, inland_remark, Trailer Type, trialer_type_id, Status, cs_control_log
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
