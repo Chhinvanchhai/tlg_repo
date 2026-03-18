@@ -11,7 +11,14 @@ http:
     data: |-
       {
            "params" : {
-
+              //         "login": "shv.trucking",
+      //         "password": "123456"
+      //          "login": "dryporttrucking@gmail.com",
+      //         "password": "123456"
+                 "login": "kimhak.phuor@tenglaygroup.com",
+                 "password": "123456"
+      //           "login": "delivery@gmail.com",
+      //            "password": "123456"
            }
       }
   auth: inherit

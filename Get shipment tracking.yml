@@ -5,13 +5,13 @@ info:
 
 http:
   method: POST
-  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/search/0"
   body:
     type: json
     data: |
       {
          "params" : {
-              "fields": "storage_day_free_time, ata_port_border, aging_mt_container, move_in_depot_dp, container_no, container_size, eta_dp, date_value, order_unloading_date, cs_user_id, f_eta_time, doc_status_id, delivery_address, thc_status_id, cs_remark, clearance_plan, inland_remark, trialer_type_id, cs_control_log,hbl_number",
+              "fields": "ata_port_border,customer_id,consignee_id,hbl_number,invoice_number,ata_port_border,vai_port_border_id",
               "expand": true,
               "page": 1,
               "limit": 10
