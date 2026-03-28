@@ -1,7 +1,7 @@
 info:
-  name: Container Cards Log Groupby HBL_NUMBER
+  name: Container Cards Log Groupby HBL_NUMBER_SHIPMENT
   type: http
-  seq: 7
+  seq: 15
 
 http:
   method: POST
@@ -11,11 +11,11 @@ http:
     data: |-
       {
          "params" : {
-              "fields": "container_no,container_size,customer_id,hbl_number,actual_arr_port_time,vai_port_border_id,inland_status,delivery_status,permit_accept_date,edo_release,clearance_plan,storage_day_free_time,cs_control_log,billing_party_id,ata_port_border,sale_type_id,clearance_point_id",
+              "fields": "ata_port_border,customer_id,consignee_id,hbl_number,invoice_number,ata_port_border,vai_port_border_id",
               "expand": true,
-              "page": 1,
+              "page": 2,
               "limit": 10
-              ,"map_domain": "actual_clearance"
+              ,"map_domain": "cs_control_log"
       //         ,"domain": [["cs_control_log","=","00a_pending"]]
            
               ,"order": "id desc"

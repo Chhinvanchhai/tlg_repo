@@ -22,7 +22,7 @@ http:
               "move_in_depot_dp": "2026-02-19",
               "eta_dp": "2026-02-21",
               "factory_eta": "2026-02-22", // UI says "Unloading Date"
-              "f_eta_time": "14:30",        // Unloading Time
+              "f_eta_time_id": 1,        // Unloading Time
               "cs_remark": "Urgent delivery requested by customer"
               ,
 

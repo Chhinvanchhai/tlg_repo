@@ -1,0 +1,25 @@
+info:
+  name: ADD TO PLAN
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/add_to_plan"
+  body:
+    type: json
+    data: |-
+      {
+         "params" : {
+          "active_ids": [186]
+         }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
