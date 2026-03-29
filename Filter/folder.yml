@@ -1,7 +1,7 @@
 info:
-  name: GET OPTION
+  name: Filter
   type: folder
-  seq: 1
+  seq: 15
 
 request:
   auth: inherit

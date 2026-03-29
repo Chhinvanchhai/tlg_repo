@@ -1,7 +1,7 @@
 info:
-  name: GET OPTION
+  name: Shipment
   type: folder
-  seq: 1
+  seq: 14
 
 request:
   auth: inherit

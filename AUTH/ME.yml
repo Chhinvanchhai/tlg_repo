@@ -1,14 +1,21 @@
 info:
-  name: get favorite filter
+  name: ME
   type: http
-  seq: 8
+  seq: 2
 
 http:
   method: POST
-  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get_filters"
+  url: "{{baseurl}}/api_gateway/v1/me"
   body:
     type: json
-    data: "{}"
+    data: |-
+      {
+         "params" : {
+            "menus": false, 
+           "permissions": false
+           
+         }
+      }
   auth:
     type: bearer
     token: "{{token}}"

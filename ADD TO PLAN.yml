@@ -1,7 +1,7 @@
 info:
   name: ADD TO PLAN
   type: http
-  seq: 16
+  seq: 10
 
 http:
   method: POST
