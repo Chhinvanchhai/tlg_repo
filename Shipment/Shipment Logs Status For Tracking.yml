@@ -1,0 +1,30 @@
+info:
+  name: Shipment Logs Status For Tracking
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  body:
+    type: json
+    data: |-
+      {
+        "params" : {
+              
+        "groupby": "dynamic_port_status,mt_container_status",
+        "keep_zero": false
+      //     ,"domain": [["customer_id","=", 1]]
+           
+        }
+        
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

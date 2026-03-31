@@ -15,11 +15,11 @@ http:
               "expand": true,
               "page": 1,
               "limit": 10
-      //         ,"domain": [ [
-      //                         "hbl_number",
-      //                         "in",
-      //                         ["344555DFDS"]
-      //                     ]]
+              ,"domain": [ [
+                              "hbl_number",
+                              "in",
+                              ["TGCU0159877"]
+                          ]]
 
          }
       }
