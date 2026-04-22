@@ -1,11 +1,11 @@
 info:
-  name: Get shipment tracking
+  name: Shipment Tracking md
   type: http
-  seq: 14
+  seq: 5
 
 http:
   method: POST
-  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/search/0"
+  url: "{{baseurl}}/api_gateway/v1/models/shipment.tracking.md/search_tracking/0"
   body:
     type: json
     data: |+
@@ -22,8 +22,6 @@ http:
                               ["015GX06508"]
                           ]
                          ]
-           
-
 
          }
       }

@@ -1,10 +1,13 @@
 name: staging
 variables:
   - name: baseurl
-    value: https://crmstage.supportinglog.com
+    value: |
+      https://crmstage.supportinglog.com
   - name: token
     value: ""
   - name: login
     value: ""
   - name: passsword
     value: ""
+  - name: refresh_token
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjQwLCJqdGkiOiIxNDcwZGEzNzg3MGE0MGVmOTliNjJkNzc4ZmIyNDI3YSJ9.aS8MCwo-dHUarcl3DU4SXCroyCRhleOCBpjbCCYuvb8

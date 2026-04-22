@@ -15,7 +15,7 @@ http:
               "parent": {
                   "fields_name": "city_address,phone,name",
                   "model": "res.partner",
-                  "id": 922 // customer id
+                  "id": 2753 // customer id
               }
           }
       }

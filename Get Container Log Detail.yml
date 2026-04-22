@@ -17,8 +17,8 @@ http:
               "limit": 10
               ,"domain": [ [
                               "hbl_number",
-                              "in",
-                              ["TGCU0159877"]
+                              "=",
+                              "NWLHCMPNH2603072"
                           ]]
 
          }

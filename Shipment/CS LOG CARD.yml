@@ -1,0 +1,31 @@
+info:
+  name: "CS LOG CARD "
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/shipment.tracking.md/get"
+  body:
+    type: json
+    data: |-
+      {
+         "params" : {
+              "fields": "ata_port_border,customer_id,consignee_id,hbl_number,invoice_number,ata_port_border,vai_port_border_id,doc_received_date",
+              "expand": true,
+              "page": 1,
+              "limit": 20
+           
+              ,"order": "id desc"
+             ,"is_query": 0
+         }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

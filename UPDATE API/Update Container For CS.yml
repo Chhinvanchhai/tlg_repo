@@ -15,24 +15,26 @@ http:
               "thc_status_id": 2,          // Many2one: ID from thc.status
               "clearance_plan": "2026-02-20", 
               "delivery_status": "002_urgent", // Selection: 001_very_urgent, 002_urgent, 003_normal
-              "trialer_type_id": 5,        // Many2one: ID from trailer.type
+              "trialer_type_id": 5
+          
+          ,        // Many2one: ID from trailer.type
 
-              // // --- Screen 2: Delivery Plan ---
+      //         // // --- Screen 2: Delivery Plan ---
               "ata_port_border": "2026-02-18",
-              "move_in_depot_dp": "2026-02-19",
-              "eta_dp": "2026-02-21",
-              "factory_eta": "2026-02-22", // UI says "Unloading Date"
-              "f_eta_time_id": 2,        // Unloading Time
-              "cs_remark": "Jusking"
-              ,
+      //         "move_in_depot_dp": "2026-02-19",
+      //         "eta_dp": "2026-02-21",
+      //         "factory_eta": "2026-02-22", // UI says "Unloading Date"
+      //         "f_eta_time_id": 2,        // Unloading Time
+      //         "cs_remark": "Jusking"
+      //         ,
 
-              // --- Screen 3: Delivery Address ---
-              "google_map_link_1": "https://maps.google.com/...",
-              "delivery_address": "Phnom Penh, Building 123",
-              "contact_name": "Tong Mengly",
-              "phone_number": "0889991168",
-              "inland_remark": "Contact guard at gate 4 999",
-              "ids": [654]   
+      //         // --- Screen 3: Delivery Address ---
+      //         "google_map_link_1": "https://maps.google.com/...",
+      //         "delivery_address": "Phnom Penh, Building 123",
+      //         "contact_name": "Tong Mengly",
+      //         "phone_number": "0889991168",
+      //         "inland_remark": "Contact guard at gate 4 999",
+              "ids": [788]   
         }
 
       }
