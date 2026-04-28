@@ -1,0 +1,32 @@
+info:
+  name: SHIPMENT CONTAINER DETIAL
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{baseurl}}/api_gateway/v1/models/shipment.container.tracking/get"
+  body:
+    type: json
+    data: |-
+      {
+            "params": {
+              
+              "fields":"shipment_tracking_id, shipment_control_log_id, container_no, container_size, booking_order_id, unloading_date, get_in_pnh_dp_date, get_out_pnh_dp_date, get_in_depot_dp_date, unloading_in_progress_date, unloading_completed_date, mt_gate_in_depot_dp_date, mt_gate_out_depot_dp_date, mt_return_stock_pnh_dp_date, mt_return_date, f_eta_time_id, delivery_address, contact_name, phone_number, cs_remark, get_out_depot_dp_date, get_out_port_border_date, truck_no, driver_number, dp_driver_phone_number, dp_trucking_no, depot_name, record_counter",
+              "expand": true,
+              "page": 1,
+              "limit": 20,
+               "domain": [["shipment_tracking_id","=", 37]]
+            }
+      }
+
+      // link field lable name: https://docs.google.com/spreadsheets/d/1Abqrt3ktegGtEISjYaoKNU4SseFVkQ_FqiP4Uuya2GE/edit?usp=sharing
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

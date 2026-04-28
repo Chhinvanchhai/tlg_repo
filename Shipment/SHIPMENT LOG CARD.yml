@@ -1,5 +1,5 @@
 info:
-  name: "CS LOG CARD "
+  name: "SHIPMENT LOG CARD "
   type: http
   seq: 4
 
@@ -15,8 +15,8 @@ http:
               "expand": true,
               "page": 1,
               "limit": 20
-           
-              ,"order": "id desc"
+             ,"map_domain": "hbl_number"
+              ,"order": "id asc"
              ,"is_query": 0
          }
       }

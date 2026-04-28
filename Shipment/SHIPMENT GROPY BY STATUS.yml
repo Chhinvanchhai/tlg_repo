@@ -1,18 +1,18 @@
 info:
-  name: Shipment Logs Status For Tracking
+  name: SHIPMENT GROPY BY STATUS
   type: http
   seq: 12
 
 http:
   method: POST
-  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  url: "{{baseurl}}/api_gateway/v1/models/shipment.tracking.md/get"
   body:
     type: json
     data: |-
       {
         "params" : {
               
-        "groupby": "dynamic_port_status,mt_container_status",
+        "groupby": "port_status,shipment_status",
         "keep_zero": false
       //     ,"domain": [["customer_id","=", 1]]
            

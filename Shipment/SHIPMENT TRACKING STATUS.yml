@@ -1,27 +1,31 @@
 info:
-  name: Container Cards Shipment
+  name: SHIPMENT TRACKING STATUS
   type: http
-  seq: 16
+  seq: 5
 
 http:
   method: POST
-  url: "{{baseurl}}/api_gateway/v1/models/cs.control.log/get"
+  url: "{{baseurl}}/api_gateway/v1/models/shipment.tracking.md/search_tracking/0"
   body:
     type: json
-    data: |-
+    data: |+
       {
          "params" : {
               "fields": "ata_port_border,customer_id,consignee_id,hbl_number,invoice_number,ata_port_border,vai_port_border_id",
               "expand": true,
-              "page": 2,
+              "page": 1,
               "limit": 10
-              ,"map_domain": "cs_control_log"
-      //         ,"domain": [["cs_control_log","=","00a_pending"]]
-           
-              ,"order": "id desc"
-             ,"is_query": 0
+              ,"domain": [ 
+                          [
+                              "hbl_number",
+                              "in",
+                              ["SITGRISV041631"]
+                          ]
+                         ]
+
          }
       }
+
   auth:
     type: bearer
     token: "{{token}}"
