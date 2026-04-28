@@ -16,7 +16,7 @@ http:
               "expand": true,
               "page": 1,
               "limit": 20,
-               "domain": [["shipment_tracking_id","=", 37]]
+               "domain": [["shipment_tracking_id","=", 1]]
             }
       }
 
